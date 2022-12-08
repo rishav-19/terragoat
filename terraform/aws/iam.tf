@@ -1,6 +1,6 @@
 resource "aws_iam_user" "user" {
   name          = "${local.resource_prefix.value}-user"
-  force_destroy = true
+  force_destroy = false
 
   tags = merge({
     Name        = "${local.resource_prefix.value}-user"
