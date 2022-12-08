@@ -2,7 +2,7 @@ resource "aws_kms_key" "logs_key" {
   # key does not have rotation enabled
   description = "${local.resource_prefix.value}-logs bucket key"
 
-  deletion_window_in_days = 7
+  deletion_window_in_days = 8
   tags = {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
     git_file             = "terraform/aws/kms.tf"
